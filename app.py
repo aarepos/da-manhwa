@@ -24,6 +24,8 @@ def call_back():
 	client = Client("session/api")
 	client.start()
 	client.send_message(956473054, plan)
+	client.stop()
+
     # try:
     #     result = client.get_chat_member(var.private_channel, user)
     #     invite_link = client.create_chat_invite_link(var.private_channel, member_limit = 1)
@@ -37,5 +39,4 @@ def call_back():
         
 
 
-     client.stop()
-
+    
