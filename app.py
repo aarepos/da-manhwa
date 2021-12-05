@@ -11,6 +11,7 @@ def call_back():
 	content = request.json
 
 	try:
+		print(content)
 		# get info
 		# user = int(content["telegram"])
 		plan = content["reference"]["link"]
