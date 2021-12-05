@@ -6,6 +6,19 @@ from plugins import var
 app = Flask(__name__)
 
 
+
+def send_for_user(plan):
+
+	try:
+		client = Client("session/api")
+		client.start()
+		client.send_message(956473054, plan)
+		client.stop()
+	except Exception as e:
+		print(e)
+
+
+
 @app.route("/", methods = ["GET", "POST"])
 def call_back():
 	content = request.json
@@ -22,14 +35,8 @@ def call_back():
 
 	# days = int(var.ref[plan])
 
-
-	try:
-		client = Client("session/api")
-		client.start()
-		client.send_message(956473054, plan)
-		client.stop()
-	except Exception as e:
-		print(e)
+	send_for_user(plan)
+	
 
 
     # try:
