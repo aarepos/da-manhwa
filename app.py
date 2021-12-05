@@ -15,8 +15,9 @@ def call_back():
 		# get info
 		# user = int(content["telegram"])
 		plan = content["reference"]["link"]
-		print("cant")
+		print(plan)
 	except:
+		print("i can't")
 		return
 
 	# days = int(var.ref[plan])
