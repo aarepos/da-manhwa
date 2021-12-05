@@ -23,10 +23,14 @@ def call_back():
 	# days = int(var.ref[plan])
 
 
-	client = Client("session/api")
-	client.start()
-	client.send_message(956473054, plan)
-	client.stop()
+	try:
+		client = Client("session/api")
+		client.start()
+		client.send_message(956473054, plan)
+		client.stop()
+	except Exception as e:
+		print(e)
+
 
     # try:
     #     result = client.get_chat_member(var.private_channel, user)
