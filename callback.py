@@ -2,14 +2,16 @@ from pyrogram import Client
 from plugins import var
 import sys
 
-try:
+def moon():
+	try:
 
-	user = int(sys.argv[1])
-	plan = sys.argv[2]
-	client = Client("session/api")
-	client.start()
-	client.send_message(user, "Your plan is " + plan)
-	client.stop()
+		user = int(sys.argv[1])
+		plan = sys.argv[2]
+		client = Client("session/api")
+		
+		client.start()
+		client.send_message(956473054, "Your plan is " + plan)
+		client.stop()
 
-except Exception as e:
-	print(e)
+	except Exception as e:
+		print(e)
