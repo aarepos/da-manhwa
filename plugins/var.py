@@ -16,10 +16,10 @@ six_month_link = "bob"
 one_year_link = "bob"
 
 ref = {
-	one_year_link: 30,
-	three_month_link: 90,
-	six_month_link: 180,
-	one_year_link: 365 
+	"478917": 30,
+	"1234": 90,
+	"4321": 180,
+	"98745": 365 
 }
 
 

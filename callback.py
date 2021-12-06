@@ -62,4 +62,7 @@ def main(user, plan):
 if True:
 	user = int(sys.argv[1])
 	plan = sys.argv[2]
+
+	plan = plan.split("/")[-1]
+
 	main(user, plan)
