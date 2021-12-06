@@ -23,7 +23,7 @@ def main(user, plan):
 
 
 		# start client
-		client = Client("session/api")
+		client = Client("session/api2")
 		client.start()
 
 		# create invite_link
