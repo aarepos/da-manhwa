@@ -12,7 +12,8 @@ def main(user, plan):
 
 		q = Query()
 		db = TinyDB("database/db.json")
-		expi = int(time.time()) + (int(var.ref[plan]) * 86400)
+		now = int(time.time())
+		expi = now + (int(var.ref[plan]) * 86400)
 
 
 		# start client
@@ -45,7 +46,8 @@ def main(user, plan):
 
 
 		# send_for_user
-		days = int(expi / 86400)
+		ex = expi - now
+		days = int(ex / 86400)
 		client.send_message(
 			chat_id = user,
 			text = f"Your plan is {days}\nYour link: {invite_link}"
