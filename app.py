@@ -10,20 +10,20 @@ def call_back():
 	
 	content = request.json
 
-    try:
-    	#get info
-    	user = int(content["telegram"])
-    	plan = content["reference"]["link"]
-    except:
-    	return
+	try:
+		#get info
+		user = int(content["telegram"])
+		plan = content["reference"]["link"]
+	except:
+		return
 
 
-    os.system(f"python callback.py {user} {plan}")
-    # return "Hello world" 
+	os.system(f"python callback.py {user} {plan}")
+	# return "Hello world" 
 
 
 
-        
+		
 
 
-    
+	
