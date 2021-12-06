@@ -45,7 +45,7 @@ def main(user, plan):
 
 
 		# send_for_user
-		days = int(expire / 86400)
+		days = int(expi / 86400)
 		client.send_message(
 			chat_id = user,
 			text = f"Your plan is {days}\nYour link: {invite_link}"
