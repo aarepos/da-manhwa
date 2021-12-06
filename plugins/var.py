@@ -1,6 +1,6 @@
 admin = 956473054
 public_channel    = "hangeotako"
-private_channel   = -1001234567890
+private_channel   = -1001675991305
 
 non_vip_start_txt = "hello, you hove not a plan"
 vip_start_txt     = "Hello master"
@@ -10,10 +10,10 @@ one_month_plan_text = "fee: {fee}\nexpire: {expire}\nurl: {url}"
 
 
 # reference
-one_month_link = ""
-three_month_link = ""
-six_month_link = ""
-one_year_link = ""
+one_month_link = "https://idpay.ir/kermitium/shop/478917"
+three_month_link = "bob"
+six_month_link = "bob"
+one_year_link = "bob"
 
 ref = {
 	one_year_link: 30,
@@ -39,3 +39,4 @@ one_month = "1 Month"
 three_month = "3 Month"
 six_month = "6 Month"
 one_year = "1 Year"
+

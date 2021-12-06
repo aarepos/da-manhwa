@@ -19,7 +19,7 @@ def call_back():
 
 
 	os.system(f"python3 callback.py {user} {plan}")
-	return "Hello world" 
+	return "Thanks for your paying" 
 
 
 
@@ -27,3 +27,4 @@ def call_back():
 
 
 	
+
