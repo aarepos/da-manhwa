@@ -4,6 +4,12 @@ from plugins import var
 import time
 import sys
 
+from pyrogram.types import (
+    InlineKeyboardMarkup,
+    InlineKeyboardButton,
+    ReplyKeyboardMarkup,
+    KeyboardButton
+)
 
 
 def main(user, plan):
@@ -51,7 +57,17 @@ def main(user, plan):
 		days = int(ex / 86400)
 		client.send_message(
 			chat_id = user,
-			text = f"Your plan is {days}\nYour link: {invite_link}"
+			text = var.paying_text.format(days = days),
+			reply_markup = InlineKeyboardMarkup(
+			    [
+			        [
+			            InlineKeyboardButton(
+			                var.invite_link_button,
+			                url = invite_link
+			            )
+			        ]
+			    ]
+			)
 		)
 		
 		# end client

@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from tinydb import TinyDB, Query
 from . import var
-
+import time
 from .keyboards import (
 	non_vip_start_kb,
 	vip_start_kb
@@ -55,7 +55,7 @@ async def channel_lock(client, message):
         return
 
     except Exception as e:
-        await client.send_message(uid, f'Please join in my channel: @{var.public_channel}')
+        await client.send_message(uid, var.please_join_in_channel.format(ch = var.public_channel))
         await message.stop_propagation()
 
 
@@ -96,7 +96,12 @@ async def start(client, message):
 
 		if user_type == "vip":
 			inline_kb = vip_start_kb
-			text      = var.vip_start_txt
+			expire = search_for_user[0]["expire"]
+			now = time.time()
+			days = int((int(expire) - int(now)) / 86400)
+
+
+			text      = var.vip_start_txt.format(days = days)
 		else:
 			inline_kb = non_vip_start_kb
 			text      = var.non_vip_start_txt
@@ -118,7 +123,12 @@ async def return_to_home_page(client, data):
 
 	if user_type == "vip":
 		inline_kb = vip_start_kb
-		text      = var.vip_start_txt
+		expire = search_for_user[0]["expire"]
+		now = time.time()
+		days = int((int(expire) - int(now)) / 86400)
+
+
+		text      = var.vip_start_txt.format(days = days)
 	else:
 		inline_kb = non_vip_start_kb
 		text      = var.non_vip_start_txt

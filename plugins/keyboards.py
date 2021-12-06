@@ -25,8 +25,8 @@ vip_start_kb = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                var.show_status_button,
-                callback_data = "show_status"
+                var.non_vpi_start_button,
+                callback_data = "show_plans"
             )
         ]
     ]
@@ -76,3 +76,5 @@ back_to_main_menu = InlineKeyboardMarkup(
         ]
     ]
 )
+
+
