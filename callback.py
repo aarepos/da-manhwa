@@ -32,7 +32,8 @@ def main(user, plan):
 
 		ziro = search_for_user[0]["expire"]
 		if ziro != None:
-			expi += int(ziro * 86400)
+			ziro = ziro - now
+			expi += ziro
 		else:
 			pass
 
