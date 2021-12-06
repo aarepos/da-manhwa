@@ -13,7 +13,7 @@ def call_back():
 
 	try:
 		#get info
-		user = int(content["telegram"])
+		user = int(content["payer"]["telegram"])
 		plan = content["reference"]["link"]
 	except:
 		return
