@@ -1,8 +1,7 @@
 from pyrogram import Client, filters
 from . import var
 from .keyboards import (
-	non_vip_start_kb,
-	vip_start_kb,
+	start_kb,
 	plans,
 	back_to_main_menu
 )

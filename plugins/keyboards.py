@@ -7,26 +7,22 @@ from pyrogram.types import (
 )
 
 
-
-
-non_vip_start_kb = InlineKeyboardMarkup(
+start_kb = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
                 var.non_vpi_start_button,
                 callback_data = "show_plans"
             )
-        ]
-    ]
-)
-
-
-vip_start_kb = InlineKeyboardMarkup(
-    [
+        ],
         [
             InlineKeyboardButton(
-                var.non_vpi_start_button,
-                callback_data = "show_plans"
+                var.tutorial_txt,
+                callback_data = "tutorial"
+            ),
+            InlineKeyboardButton(
+                var.solve_test_txt,
+                callback_data = "testing"
             )
         ]
     ]
@@ -77,4 +73,24 @@ back_to_main_menu = InlineKeyboardMarkup(
     ]
 )
 
+show_tutorial_kb = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(
+                var.first_tutorial,
+                url = "https://t.me/kermitium"
+            ),
+            InlineKeyboardButton(
+                var.second_tutorial,
+                url = "https://t.me/hangeotako"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                var.home_page_button,
+                callback_data = "home_page"
+            )
+        ]
+    ]
+)
 

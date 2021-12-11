@@ -3,6 +3,13 @@ admin2 = 956473054
 public_channel    = "hangeotako"
 private_channel   = -1001675991305
 
+
+
+
+
+
+
+
 non_vip_start_txt = """شما هیچ اشتراکی ندارید! 
 برای تهیه اشتراک روی دکمه زیر کلیک کنید."""
 vip_start_txt     = """زمان باقی مانده تا پایان اشتراک : {days} روز
@@ -38,6 +45,20 @@ paying_text = """با تشکر از پرداخت شما 🌹
 مدت اشتراک: {days}"""
 
 
+choose_tutorial = "choose tutorial"
+tutorial_txt = "Tutorial"
+solve_test_txt = "Testing"
+first_tutorial = "first tutorial"
+second_tutorial = "second tutorial"
+
+
+
+
+
+
+
+
+
 # reference
 one_month_payment_url   = "https://idpay.ir/kermitium/shop/479301"
 three_month_payment_url = "https://idpay.ir/kermitium/shop/479303"
@@ -46,9 +67,9 @@ one_year_payment_url    = "https://idpay.ir/kermitium/shop/479307"
 
 ref = {
 	"479301": 30,
-	"479303": 90,
-	"479305": 180,
-	"479307": 365 
+	"479303": 60,
+	"479305": 90,
+	"479307": 120 
 }
 
 

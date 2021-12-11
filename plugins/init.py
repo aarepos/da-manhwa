@@ -3,8 +3,7 @@ from tinydb import TinyDB, Query
 from . import var
 import time
 from .keyboards import (
-	non_vip_start_kb,
-	vip_start_kb
+	start_kb
 )
 
 
@@ -25,6 +24,7 @@ async def check_for_message_in_block(client, message):
 	if user_type == "block":
 		await message.stop_propagation()
 
+
 @Client.on_callback_query(filters.all, -2)
 async def check_for_call_in_block(client, data):
 
@@ -40,7 +40,6 @@ async def check_for_call_in_block(client, data):
 
 	if user_type == "block":
 		await data.message.stop_propagation()
-
 
 
 # channel lock
@@ -59,7 +58,6 @@ async def channel_lock(client, message):
         await message.stop_propagation()
 
 
-
 # add new user in database
 async def new_user(client, message):
 
@@ -76,7 +74,6 @@ async def new_user(client, message):
 	})
 
 
-
 # start command handler
 @Client.on_message(filters.command("start"))
 async def start(client, message):
@@ -89,13 +86,13 @@ async def start(client, message):
 	search_for_user = db.search(q.id == uid)
 	if len(search_for_user) == 0:
 		await new_user(client, message)
-		inline_kb = non_vip_start_kb
+		inline_kb = start_kb
 		text      = var.non_vip_start_txt
 	else:
 		user_type = search_for_user[0]["type"]
 
 		if user_type == "vip":
-			inline_kb = vip_start_kb
+			inline_kb = start_kb
 			expire = search_for_user[0]["expire"]
 			now = time.time()
 			days = int((int(expire) - int(now)) / 86400)
@@ -103,12 +100,10 @@ async def start(client, message):
 
 			text      = var.vip_start_txt.format(days = days)
 		else:
-			inline_kb = non_vip_start_kb
+			inline_kb = start_kb
 			text      = var.non_vip_start_txt
 
 	await message.reply_text(text, reply_markup = inline_kb)
-
-
 
 
 @Client.on_callback_query(filters.regex("home_page"))
@@ -122,7 +117,7 @@ async def return_to_home_page(client, data):
 	user_type = search_for_user[0]["type"]
 
 	if user_type == "vip":
-		inline_kb = vip_start_kb
+		inline_kb = start_kb
 		expire = search_for_user[0]["expire"]
 		now = time.time()
 		days = int((int(expire) - int(now)) / 86400)
@@ -130,7 +125,7 @@ async def return_to_home_page(client, data):
 
 		text      = var.vip_start_txt.format(days = days)
 	else:
-		inline_kb = non_vip_start_kb
+		inline_kb = start_kb
 		text      = var.non_vip_start_txt
 	
 	await data.answer("", show_alert = False)
@@ -138,3 +133,6 @@ async def return_to_home_page(client, data):
 		text,
 		reply_markup = inline_kb
 	)
+
+
+
