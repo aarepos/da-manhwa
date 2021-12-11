@@ -22,7 +22,7 @@ start_kb = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 var.solve_test_txt,
-                callback_data = "testing"
+                url = var.testgir_bot
             )
         ]
     ]

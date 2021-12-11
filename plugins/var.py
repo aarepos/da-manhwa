@@ -2,7 +2,7 @@ admin = 956473054
 admin2 = 956473054
 public_channel    = "hangeotako"
 private_channel   = -1001675991305
-
+testgir_bot       = "https://t.me/npmrobot"
 
 
 
@@ -45,11 +45,11 @@ paying_text = """با تشکر از پرداخت شما 🌹
 مدت اشتراک: {days}"""
 
 
-choose_tutorial = "choose tutorial"
-tutorial_txt = "Tutorial"
-solve_test_txt = "Testing"
-first_tutorial = "first tutorial"
-second_tutorial = "second tutorial"
+choose_tutorial = "از بین آموزش ها یکی را انتخاب کنید..."
+tutorial_txt = "آموزش ها"
+solve_test_txt = "ورود به تیم"
+first_tutorial = "متن آموزش اول"
+second_tutorial = "متن آموزش دوم"
 
 
 
