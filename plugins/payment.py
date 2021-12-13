@@ -58,7 +58,7 @@ async def one_month_plan(client, data):
 @Client.on_callback_query(filters.regex("three_month"))
 async def three_month_plan(client, data):
 
-	plan   = "سه ماهه"
+	plan   = "دو ماهه"
 	fee    = var.three_month_fee
 	url    = var.three_month_payment_url
 	uid    = data.from_user.id
@@ -90,7 +90,7 @@ async def three_month_plan(client, data):
 @Client.on_callback_query(filters.regex("six_month"))
 async def six_month_plan(client, data):
 
-	plan   = "شش ماهه"
+	plan   = "سه ماهه"
 	fee    = var.six_month_fee
 	url    = var.six_month_payment_url
 	uid    = data.from_user.id
@@ -122,7 +122,7 @@ async def six_month_plan(client, data):
 @Client.on_callback_query(filters.regex("one_year"))
 async def one_year_plan(client, data):
 
-	plan   = "یک ساله"
+	plan   = "چهار ماهه"
 	fee    = var.one_year_fee
 	url    = var.one_year_payment_url
 	uid    = data.from_user.id
