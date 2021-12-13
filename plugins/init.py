@@ -43,19 +43,19 @@ async def check_for_call_in_block(client, data):
 
 
 # channel lock
-@Client.on_message(filters.text, -1)
-async def channel_lock(client, message):
+# @Client.on_message(filters.text, -1)
+# async def channel_lock(client, message):
     
-    uid = message.from_user.id
+#     uid = message.from_user.id
 
-    try:
+#     try:
 
-        result = await client.get_chat_member(var.public_channel, uid)
-        return
+#         result = await client.get_chat_member(var.public_channel, uid)
+#         return
 
-    except Exception as e:
-        await client.send_message(uid, var.please_join_in_channel.format(ch = var.public_channel))
-        await message.stop_propagation()
+#     except Exception as e:
+#         await client.send_message(uid, var.please_join_in_channel.format(ch = var.public_channel))
+#         await message.stop_propagation()
 
 
 # add new user in database

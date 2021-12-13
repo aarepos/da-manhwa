@@ -1,8 +1,8 @@
-admin = 956473054
-admin2 = 956473054
-public_channel    = "hangeotako"
-private_channel   = -1001675991305
-testgir_bot       = "https://t.me/npmrobot"
+admin = 499120102
+admin2 = 499120102
+public_channel    = "null"
+private_channel   = -1001580865031
+testgir_bot       = "https://t.me/testdamanhwa_bot"
 
 
 
@@ -48,8 +48,8 @@ paying_text = """با تشکر از پرداخت شما 🌹
 choose_tutorial = "از بین آموزش ها یکی را انتخاب کنید..."
 tutorial_txt = "آموزش ها"
 solve_test_txt = "ورود به تیم"
-first_tutorial = "متن آموزش اول"
-second_tutorial = "متن آموزش دوم"
+first_tutorial = "ادیت با PC"
+second_tutorial = "ادیت با موبایل"
 
 
 
@@ -60,24 +60,24 @@ second_tutorial = "متن آموزش دوم"
 
 
 # reference
-one_month_payment_url   = "https://idpay.ir/kermitium/shop/479301"
-three_month_payment_url = "https://idpay.ir/kermitium/shop/479303"
-six_month_payment_url   = "https://idpay.ir/kermitium/shop/479305"
-one_year_payment_url    = "https://idpay.ir/kermitium/shop/479307"
+one_month_payment_url   = "http://idpay.ir/dastream/shop/481971"
+three_month_payment_url = "http://idpay.ir/dastream/shop/481973"
+six_month_payment_url   = "http://idpay.ir/dastream/shop/481977"
+one_year_payment_url    = "http://idpay.ir/dastream/shop/481979"
 
 ref = {
-	"479301": 30,
-	"479303": 60,
-	"479305": 90,
-	"479307": 120 
+	"481971": 30,
+	"481973": 60,
+	"481977": 90,
+	"481979": 120 
 }
 
 
 # fee (rial)
-one_month_fee = 1000
-three_month_fee = 2000
-six_month_fee = 3000
-one_year_fee =4000
+one_month_fee = 10000
+three_month_fee = 17000
+six_month_fee = 25000
+one_year_fee =35000
 
 
 # buttons
@@ -86,8 +86,10 @@ non_vpi_start_button = "خرید اشتراک"
 payment_button = "پرداخت"
 invite_link_button = "ورود به چنل VIP"
 
+donate_text = "حمایت مالی"
+
 one_month = "یک ماهه"
-three_month = "سه ماهه"
-six_month = "شش ماهه"
-one_year = "یک ساله"
+three_month = "دو ماهه"
+six_month = "سه ماهه"
+one_year = "چهار ماهه"
 

@@ -24,7 +24,13 @@ start_kb = InlineKeyboardMarkup(
                 var.solve_test_txt,
                 url = var.testgir_bot
             )
-        ]
+        ],
+        [
+            InlineKeyboardButton(
+                var.donate_text,
+                url = "http://idpay.ir/dastream"
+            )
+        ],
     ]
 )
 
@@ -78,11 +84,11 @@ show_tutorial_kb = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 var.first_tutorial,
-                url = "https://t.me/kermitium"
+                url = "https://t.me/editdamanhwa/17"
             ),
             InlineKeyboardButton(
                 var.second_tutorial,
-                url = "https://t.me/hangeotako"
+                url = "https://t.me/editdamanhwa/2"
             ),
         ],
         [

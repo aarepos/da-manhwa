@@ -16,10 +16,7 @@ choose_test_kb = ReplyKeyboardMarkup(
         [
             KeyboardButton(var.edit_test),
             KeyboardButton(var.tr_test),
-        ],
-        [
-            KeyboardButton(var.type_test),
-            KeyboardButton(var.clean_test),
+            KeyboardButton(var.type_test)
         ],
 
         [KeyboardButton(var.back_to_main)]
